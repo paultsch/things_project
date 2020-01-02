@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Submissions</h1>
+
+<ul class="listing">
+  <div class="row">
+    <% @submissions.each do |submission| %>
+        <div class="well col-md-4">
+          <p><%= submission.submission %></p>
+        </div>
+    <% end %>
+  </div>
+</ul>
+<%= link_to 'Next Round', root_path, class: "btn btn-success" %>

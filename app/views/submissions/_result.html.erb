@@ -1,0 +1,12 @@
+<div id="round-search-results">
+  <div class="row">
+    <% @submissions.each do |submission| %>
+        <div class="well col-md-4">
+          <p><%= submission.submission %></p>
+          <input type="checkbox">Done
+          <input type="text">
+
+        </div>
+    <% end %>
+  </div>
+</div>

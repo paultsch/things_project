@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Things Game</h1>
+
+<%= link_to "Add a Thing", new_submission_path, class: "btn btn-success" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Users</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.usernames %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= form_tag search_round_path, method: :get, id: "submission-round-form" do %>
+  <%= text_field_tag :search_param, params[:search_param] %>
+  <%= button_tag "Guessing Round", class: "btn btn-success" %>
+<% end %>

@@ -1,0 +1,16 @@
+<%= form_for(@submission) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :round %>
+    <%= f.text_field :round, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :submission %>
+    <%= f.text_area :submission, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
